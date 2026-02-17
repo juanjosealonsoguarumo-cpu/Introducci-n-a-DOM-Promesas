@@ -1,12 +1,34 @@
-const usuarios = [
-    { id: 1, nombre: "Ana García", email: "ana@ejemplo.com", rol: "Admin" },
-    { id: 2, nombre: "Juan Pérez", email: "juan@ejemplo.com", rol: "Editor" },
-    { id: 3, nombre: "Maria López", email: "maria@ejemplo.com", rol: "Usuario" }
-];
+const users = [
+  {
+    id: 1,
+    name: "Alejandro Gómez",
+    email: "alejandro.gomez@example.com"
+  },
+  {
+    id: 2,
+    name: "María Fernanda López",
+    email: "maria.lopez@example.com"
+  },
+  {
+    id: 3,
+    name: "Carlos Andrés Ruiz",
+    email: "carlos.ruiz@example.com"
+  },
+  {
+    id: 4,
+    name: "Laura Daniela Martínez",
+    email: "laura.martinez@example.com"
+  },
+  {
+    id: 5,
+    name: "Juan Sebastián Torres",
+    email: "juan.torres@example.com"
+  }
+]
 const buscarUsuarioEnBD = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const usuarioEncontrado = usuarios.find(u => u.id === parseInt(id));
+            const usuarioEncontrado = users.find(u => u.id === parseInt(id));
             
             if (usuarioEncontrado) {
                 resolve(usuarioEncontrado);
@@ -49,5 +71,4 @@ btnSearch.addEventListener('click', () => {
             btnSearch.disabled = false;
             console.log("Búsqueda finalizada.");
         });
-
 });
