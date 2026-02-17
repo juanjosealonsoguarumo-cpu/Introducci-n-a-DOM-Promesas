@@ -43,10 +43,11 @@ btnSearch.addEventListener('click', () => {
             `;
         })
         .catch(error => {
-            resultContainer.innerHTML = `<p class="error">❌ ${error}</p>`;
+            resultContainer.innerHTML = `<p class="error"> ${error}</p>`;
         })
         .finally(() => {
             btnSearch.disabled = false;
             console.log("Búsqueda finalizada.");
         });
+
 });
